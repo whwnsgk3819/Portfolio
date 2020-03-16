@@ -93,25 +93,25 @@ $(".right__arrow").click(function(){
      return false;
 });
 
-$("#listHome"),$("#buttonHome").click(function(){
+$("#listHome,#buttonHome").click(function(){
      $('html, body').animate({
           scrollTop : 0
      }, 500);
      return false;
 });
-$("#listAbout"),$("#buttonAbout").click(function(){
+$("#listAbout,#buttonAbout").click(function(){
      $('html, body').animate({
           scrollTop : $('.about').offset().top - 50
      }, 500);
      return false;
 });
-$("#listSkill"),$("#buttonSkill").click(function(){
+$("#listSkill,#buttonSkill").click(function(){
      $('html, body').animate({
           scrollTop : $('.introduce').offset().top - 180
      }, 500);
      return false;
 });
-$("#listPortfolio"),$("#buttonPF").click(function(){
+$("#listPortfolio,#buttonPF").click(function(){
 
      $('html, body').animate({
           scrollTop : $('.portfolio').offset().top  - 80
