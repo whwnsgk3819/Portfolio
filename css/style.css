@@ -83,8 +83,7 @@
   left: 0;
 }
 .section__wrap {
-  text-align: left;
-  margin-left: 2%;
+  text-align: center;
 }
 .section__name {
   padding-top: 290px;
@@ -415,17 +414,16 @@
   padding-bottom: 30px;
 }
 .portfolio__title {
-  position: absolute;
   font-size: 50px;
-  top: -129px;
-  left: 41%;
   margin: 0 auto;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 80px;
 }
 .pf__own {
   opacity: 0;
   transition: opacity 3s;
+  padding-top: 100px;
 }
 .pf__own.on {
   opacity: 1;
@@ -532,7 +530,6 @@
   text-decoration: none;
 }
 .pf__two {
-  background-color: #fafafa;
   transition: opacity 3s;
   opacity: 0;
 }
@@ -565,7 +562,6 @@
   width: 460px;
 }
 .pf__four {
-  background-color: #fafafa;
   opacity: 0;
 }
 .pf__four.on {
@@ -589,9 +585,20 @@
 }
 .pf__six {
   opacity: 0;
-  padding-bottom: 100px;
 }
 .pf__six.on {
+  opacity: 1;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+.pf__seven {
+  opacity: 0;
+  padding-bottom: 100px;
+}
+.pf__seven.on {
   opacity: 1;
   animation-name: move;
   animation-duration: 2s;
@@ -774,9 +781,6 @@
   .section {
     margin-bottom: 188px;
   }
-  .portfolio__title {
-    left: 37%;
-  }
 }
 @media screen and (max-width: 949px) {
   .section__background {
@@ -794,6 +798,18 @@
   }
   .portfolio__leftbox {
     width: 48%;
+  }
+  .portfolio__leftbox-phone {
+    width: 13%;
+    position: absolute;
+    bottom: -4%;
+    left: 40%;
+  }
+  .portfolio__leftbox-phone-two {
+    width: 13%;
+    position: absolute;
+    bottom: -4%;
+    left: 50%;
   }
   .portfolio__rightbox-use {
     margin-bottom: 5px;
@@ -816,10 +832,6 @@
   }
   .section__title {
     font-size: 54px;
-  }
-
-  .portfolio__title {
-    left: 34%;
   }
 }
 @media screen and (max-width: 769px) {
@@ -849,6 +861,20 @@
     float: none;
     width: 55%;
     margin: 0 auto;
+  }
+
+  .portfolio__leftbox-img--none {
+    display: none;
+  }
+  .portfolio__leftbox-phone {
+    width: 40%;
+    position: static;
+    margin-bottom: 10px;
+  }
+  .portfolio__leftbox-phone-two {
+    width: 40%;
+    position: static;
+    margin-bottom: 10px;
   }
   .portfolio__rightbox {
     float: none;
@@ -912,6 +938,7 @@
     line-height: 35px;
     width: 50%;
   }
+
   .portfolio__button {
     margin-bottom: 5px;
   }
@@ -920,6 +947,7 @@
   }
   .footer__text {
     font-size: 14px;
+    width: 100%;
   }
   .footer__text-content {
     font-size: 10px;
@@ -938,8 +966,6 @@
     text-align: center;
   }
   .portfolio__title {
-    left: 26%;
-    top: -76px;
     font-size: 40px;
   }
   .introduce__title {
@@ -996,7 +1022,29 @@
   .section {
     margin-bottom: 107px;
   }
-  .section__wrap {
-    margin-left: 0%;
-  }
+}
+
+/*LOADING*/
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 100;
+}
+.loading.on {
+  display: none;
+}
+.loader {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading svg path,
+.loading svg rect {
+  fill: pink;
 }

@@ -54,6 +54,11 @@ $(window).scroll(function () {
      } else {
           $('.pf__six').removeClass("on");
      }
+     if (scrollBottom >= $('.pf__seven').offset().top) {
+          $('.pf__seven').addClass("on");
+     } else {
+          $('.pf__seven').removeClass("on");
+     }
 
 
      // if(scrollTop >= 300){
@@ -95,38 +100,7 @@ $(window).scroll(function () {
      // }
 })
 
-$(".right__arrow").click(function () {
-     $('html, body').animate({
-          scrollTop: 0
-     }, 500);
-     return false;
-});
 
-$("#listHome,#buttonHome").click(function () {
-     $('html, body').animate({
-          scrollTop: 0
-     }, 500);
-     return false;
-});
-$("#listAbout,#buttonAbout").click(function () {
-     $('html, body').animate({
-          scrollTop: $('.about').offset().top - 50
-     }, 500);
-     return false;
-});
-$("#listSkill,#buttonSkill").click(function () {
-     $('html, body').animate({
-          scrollTop: $('.introduce').offset().top - 180
-     }, 500);
-     return false;
-});
-$("#listPortfolio,#buttonPF").click(function () {
-
-     $('html, body').animate({
-          scrollTop: $('.portfolio').offset().top - 80
-     }, 500);
-     return false;
-});
 
 var $left = $(".header__menu-list-button")
 var $button = $(".button")
@@ -134,4 +108,44 @@ var $button = $(".button")
 
 $left.click(function () {
      $button.toggleClass("on");
+})
+
+$(document).ready(function () {
+     //3초 후 로딩 제거
+     setTimeout(function () {
+          $('.loading').addClass('on');
+     }, 2000)
+     $(".right__arrow").click(function () {
+          $('html, body').animate({
+               scrollTop: 0
+          }, 500);
+          return false;
+     });
+
+     $("#listHome,#buttonHome").click(function () {
+          $('html, body').animate({
+               scrollTop: 0
+          }, 500);
+          return false;
+     });
+     $("#listAbout,#buttonAbout").click(function () {
+          $('html, body').animate({
+               scrollTop: $('.about').offset().top - 50
+          }, 500);
+          return false;
+     });
+     $("#listSkill,#buttonSkill").click(function () {
+          $('html, body').animate({
+               scrollTop: $('.introduce').offset().top - 180
+          }, 500);
+          return false;
+     });
+     $("#listPortfolio,#buttonPF").click(function () {
+
+          $('html, body').animate({
+               scrollTop: $('.portfolio').offset().top - 80
+          }, 500);
+          return false;
+
+     });
 })
