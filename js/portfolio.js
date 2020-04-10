@@ -19,10 +19,15 @@ $(window).scroll(function () {
      } else {
           $('.introduce').removeClass("on");
      }
-     if (scrollBottom >= $('.pf__own').offset().top) {
-          $('.pf__own').addClass("on");
+     if (scrollBottom >= $('.portfolio').offset().top) {
+          $('.portfolio').addClass("on");
      } else {
-          $('.pf__own').removeClass("on");
+          $('.portfolio').removeClass("on");
+     }
+     if (scrollBottom >= $('.pf__one').offset().top) {
+          $('.pf__one').addClass("on");
+     } else {
+          $('.pf__one').removeClass("on");
      }
      if (scrollBottom >= $('.pf__two').offset().top) {
           $('.pf__two').addClass("on");
@@ -44,11 +49,7 @@ $(window).scroll(function () {
      } else {
           $('.pf__five').removeClass("on");
      }
-     if (scrollBottom >= $('.pf__five').offset().top) {
-          $('.pf__five').addClass("on");
-     } else {
-          $('.pf__five').removeClass("on");
-     }
+
      if (scrollBottom >= $('.pf__six').offset().top) {
           $('.pf__six').addClass("on");
      } else {
@@ -61,43 +62,7 @@ $(window).scroll(function () {
      }
 
 
-     // if(scrollTop >= 300){
-     //  $('.about').addClass("on");
-     // }else{
-     //    $('.about').removeClass("on");
-     // }
 
-     // if(scrollTop >= 1900){
-     //      $('.pf__own').addClass("on");
-     // }else{
-     //      $('.pf__own').removeClass("on");
-     // }
-
-     // if(scrollTop >= 2800){
-     //      $('.pf__two').addClass('on');
-     // }else{
-     //      $('.pf__two').removeClass('on');
-     // }
-     // if(scrollTop >= 3400){
-     //  $('.pf__three').addClass('on');
-     // }else{
-     //      $('.pf__three').removeClass('on');
-     // }
-     // if(scrollTop >= 4200){
-     //      $('.pf__four').addClass('on');
-     // }else{
-     //      $('.pf__four').removeClass('on');
-     // }
-     // if(scrollTop >= 4800){
-     //      $('.pf__five').addClass('on');
-     // }else{
-     //      $('.pf__five').removeClass('on');
-     // }
-     // if(scrollTop >= 5500){
-     //      $('.pf__six').addClass('on');
-     // }else{
-     //      $('.pf__six').removeClass('on');
-     // }
 })
 
 

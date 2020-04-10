@@ -184,7 +184,7 @@
 }
 @keyframes move {
   from {
-    top: 200px;
+    top: 400px;
     opacity: 0;
   }
   to {
@@ -410,9 +410,39 @@
   width: 100%;
   margin: 0 auto;
   background-color: #fff;
-  padding-top: 180px;
+  padding-top: 200px;
   padding-bottom: 30px;
+  opacity: 0;
+  transition: opacity 3s;
 }
+.portfolio.on {
+  opacity: 1;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+.pf__one .pf__two .pf__three .pf__four .pf__five .pf__six .pf__seven {
+  padding-bottom: 30px;
+  opacity: 0;
+  transition: opacity 3s;
+}
+.pf__one.on
+  .pf__two.on
+  .pf__three.on
+  .pf__four.on
+  .pf__five.on
+  .pf__six.on
+  .pf__seven.on {
+  opacity: 1;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
 .portfolio__title {
   font-size: 50px;
   margin: 0 auto;
@@ -420,18 +450,11 @@
   font-weight: bold;
   margin-bottom: 80px;
 }
-.pf__own {
-  opacity: 0;
-  transition: opacity 3s;
+.pf__start {
   padding-top: 100px;
 }
-.pf__own.on {
-  opacity: 1;
-  animation-name: move;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  position: relative;
+.pf__finish {
+  padding-bottom: 100px;
 }
 .portfolio__wrap {
   position: relative;
@@ -529,30 +552,7 @@
   color: inherit;
   text-decoration: none;
 }
-.pf__two {
-  transition: opacity 3s;
-  opacity: 0;
-}
-.pf__two.on {
-  opacity: 1;
-  animation-name: move;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  position: relative;
-}
-.pf__three {
-  transition: opacity 3s;
-  opacity: 0;
-}
-.pf__three.on {
-  opacity: 1;
-  animation-name: move;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  position: relative;
-}
+
 .pf__two-leftbox {
   float: right;
   text-align: center;
@@ -561,51 +561,7 @@
   float: left;
   width: 460px;
 }
-.pf__four {
-  opacity: 0;
-}
-.pf__four.on {
-  opacity: 1;
-  animation-name: move;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  position: relative;
-}
-.pf__five {
-  opacity: 0;
-}
-.pf__five.on {
-  opacity: 1;
-  animation-name: move;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  position: relative;
-}
-.pf__six {
-  opacity: 0;
-}
-.pf__six.on {
-  opacity: 1;
-  animation-name: move;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  position: relative;
-}
-.pf__seven {
-  opacity: 0;
-  padding-bottom: 100px;
-}
-.pf__seven.on {
-  opacity: 1;
-  animation-name: move;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  position: relative;
-}
+
 .footer {
   width: 100%;
   margin: 0 auto;
